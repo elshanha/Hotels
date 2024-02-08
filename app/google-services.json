@@ -1,26 +1,44 @@
 {
   "project_info": {
-    "project_number": "808626988386",
-    "project_id": "pushnotifications-1bff0",
-    "storage_bucket": "pushnotifications-1bff0.appspot.com"
+    "project_number": "74454693938",
+    "project_id": "hotels-66057",
+    "storage_bucket": "hotels-66057.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:808626988386:android:9973dbe252a08ad633b83b",
+        "mobilesdk_app_id": "1:74454693938:android:94831efc3b1a9e1a58a42b",
         "android_client_info": {
-          "package_name": "com.example.pushnotifications"
+          "package_name": "com.example.hotels"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "74454693938-ceqedp623211gj8sbsh6v72go92asv5g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hotels",
+            "certificate_hash": "da5cd838cf66ca27db54cc9e38416737c718f934"
+          }
+        },
+        {
+          "client_id": "74454693938-16uda4lfkf2a83ar10nhc0oa1f4qe926.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyBnih_OCCLbPzCQ9HxlO9BU3NyuPzUWxuE"
+          "current_key": "AIzaSyA4K4KLte86_hNkPS9BExsy0UrPsN0nSo4"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "74454693938-16uda4lfkf2a83ar10nhc0oa1f4qe926.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

@@ -1,6 +1,14 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+dependencies {
+Classpath.navArgs
+}
+
 plugins {
-    id("com.android.application") version "8.2.2" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.22" apply false
-    id("com.google.gms.google-services") version "4.4.0" apply false
+    id(Plugins.androidApplication) version Versions.androidApplication apply false
+    id(Plugins.jetBrainsKotlin) version Versions.jetbrainsKotlinAndroid apply false
+    id(Classpath.hilt) version Versions.hilt apply false
+    id(Plugins.gmsGoogleServices) version Versions.gmsGoogleServices apply false
+    id(Plugins.androidLibrary) version Versions.androidLib apply false
+    id(Plugins.firebaseChraslytics) version Versions.chraslytics apply false
 }

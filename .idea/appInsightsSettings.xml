@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.example.pushnotifications" />
-                  <option name="mobileSdkAppId" value="1:808626988386:android:9973dbe252a08ad633b83b" />
-                  <option name="projectId" value="pushnotifications-1bff0" />
-                  <option name="projectNumber" value="808626988386" />
+                  <option name="appId" value="com.example.hotels" />
+                  <option name="mobileSdkAppId" value="1:74454693938:android:94831efc3b1a9e1a58a42b" />
+                  <option name="projectId" value="hotels-66057" />
+                  <option name="projectNumber" value="74454693938" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
