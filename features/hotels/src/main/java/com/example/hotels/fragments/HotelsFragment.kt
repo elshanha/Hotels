@@ -11,13 +11,14 @@ import com.example.hotels.adapter.HotelsListAdapter
 import com.example.hotels.databinding.FragmentHotelsBinding
 import com.example.hotels.viewmodels.HotelsViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class HotelsFragment : BaseFragment<FragmentHotelsBinding>(FragmentHotelsBinding::inflate) {
 
-    lateinit var adapter: HotelsListAdapter
+    lateinit var hotelsAdapter: HotelsListAdapter
 
     private val viewModel: HotelsViewModel by viewModels()
 
@@ -26,24 +27,25 @@ class HotelsFragment : BaseFragment<FragmentHotelsBinding>(FragmentHotelsBinding
         return viewModel
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpRecyclerView()
 
-        val hotelList = viewModel.hotels.value
-
-            lifecycleScope.launch {
-                viewModel.getFlights()
-                adapter.submitList(hotelList)
+        lifecycleScope.launch {
+            viewModel.getFlights()
+            viewModel.hotels.collectLatest {
+                hotelsAdapter.submitList(it)
             }
+        }
 
     }
 
     private fun setUpRecyclerView() {
-        adapter = HotelsListAdapter(onClick = {})
+        hotelsAdapter = HotelsListAdapter(onClick = {})
         binding.hotelsRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = adapter
+            adapter = hotelsAdapter
         }
 
     }
